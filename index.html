@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Converter Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-code"></i> Code Converter Pro</h1>
+            <p>Convert code between programming languages with AI-powered accuracy</p>
+        </header>
+
+        <div class="converter-container">
+            <div class="code-area">
+                <div class="code-header">
+                    <select id="sourceLanguage">
+                        <option value="">Select Source Language</option>
+                    </select>
+                    <button id="detectLanguage" title="Detect Language"><i class="fas fa-magic"></i> Detect</button>
+                    <button id="loadSample" title="Load Sample Code"><i class="fas fa-file-code"></i> Sample</button>
+                </div>
+                <div id="sourceEditor" class="editor"></div>
+            </div>
+
+            <div class="controls">
+                <button id="convertBtn"><i class="fas fa-exchange-alt"></i> Convert</button>
+                <div class="settings">
+                    <label for="optimizationLevel">Optimization:</label>
+                    <select id="optimizationLevel">
+                        <option value="balanced">Balanced</option>
+                        <option value="performance">Performance</option>
+                        <option value="readability">Readability</option>
+                    </select>
+                    <label>
+                        <input type="checkbox" id="includeComments" checked>
+                        Include Comments
+                    </label>
+                </div>
+            </div>
+
+            <div class="code-area">
+                <div class="code-header">
+                    <select id="targetLanguage">
+                        <option value="">Select Target Language</option>
+                    </select>
+                    <button id="copyOutput" title="Copy to Clipboard"><i class="far fa-copy"></i></button>
+                    <button id="downloadOutput" title="Download Code"><i class="fas fa-download"></i></button>
+                </div>
+                <div id="targetEditor" class="editor"></div>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-bolt"></i>
+                <h3>Fast Conversion</h3>
+                <p>Convert code between languages in seconds with our optimized engine</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-language"></i>
+                <h3>30+ Languages</h3>
+                <p>Supports all major programming languages and frameworks</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-brain"></i>
+                <h3>AI-Powered</h3>
+                <p>Uses advanced AI to ensure accurate and idiomatic conversions</p>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <h2><i class="fas fa-history"></i> Conversion History</h2>
+            <div id="historyList" class="history-list"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Code Converter Pro &copy; 2023 | Powered by AI Technology</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.2/ace.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
